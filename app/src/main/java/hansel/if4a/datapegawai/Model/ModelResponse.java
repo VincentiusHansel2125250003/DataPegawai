@@ -1,0 +1,4 @@
+package hansel.if4a.datapegawai.Model;
+
+public class ModelResponse {
+}
