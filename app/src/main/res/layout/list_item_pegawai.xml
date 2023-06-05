@@ -24,7 +24,7 @@
             android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Makanan"
+            android:text="Nama Pegawai"
             android:textSize="21sp"
             android:textStyle="bold"
             />

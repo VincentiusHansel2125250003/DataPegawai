@@ -37,7 +37,7 @@ public class UbahActivity extends AppCompatActivity {
         yJenisKelamin = ambil.getStringExtra("xJenisKelamin");
         
         etNama = findViewById(R.id.et_nama);
-        etUmur = findViewById(R.id.et_asal);
+        etUmur = findViewById(R.id.et_umur);
         etAsal = findViewById(R.id.et_asal);
         etPendidikan = findViewById(R.id.et_pendidikan);
         etJenisKelamin =  findViewById(R.id.et_jeniskelamin);
