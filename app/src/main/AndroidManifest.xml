@@ -18,9 +18,6 @@
             android:name=".Activity.SplashScreen"
             android:exported="false" />
         <activity
-            android:name=".Activity.DetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activity.UbahActivity"
             android:exported="false"
             android:parentActivityName=".Activity.MainActivity" />
