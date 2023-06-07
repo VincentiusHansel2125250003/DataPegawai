@@ -31,7 +31,7 @@ public class TambahActivity extends AppCompatActivity {
         etUmur = findViewById(R.id.et_umur);
         etAsal = findViewById(R.id.et_asal);
         etPendidikan = findViewById(R.id.et_pendidikan);
-        etJenisKelamin = findViewById(R.id.et_jeniskelamin);
+        etJenisKelamin = findViewById(R.id.et_jenisKelamin);
         btnSimpan = findViewById(R.id.btn_simpan);
 
         btnSimpan.setOnClickListener(new View.OnClickListener() {

@@ -19,7 +19,7 @@ public interface APIRequestData {
             @Field("umur") String umur,
             @Field("asal") String asal,
             @Field("pendidikan") String pendidikan,
-            @Field("jeniskelamin") String jeniskelamin
+            @Field("jeniskelamin") String jenisKelamin
     );
 
     @FormUrlEncoded
@@ -30,7 +30,7 @@ public interface APIRequestData {
             @Field("umur") String umur,
             @Field("asal") String asal,
             @Field("pendidikan") String pendidikan,
-            @Field("jeniskelamin") String jeniskelamin
+            @Field("jeniskelamin") String jenisKelamin
     );
 
     @FormUrlEncoded

@@ -40,7 +40,7 @@ public class UbahActivity extends AppCompatActivity {
         etUmur = findViewById(R.id.et_umur);
         etAsal = findViewById(R.id.et_asal);
         etPendidikan = findViewById(R.id.et_pendidikan);
-        etJenisKelamin =  findViewById(R.id.et_jeniskelamin);
+        etJenisKelamin =  findViewById(R.id.et_jenisKelamin);
         btnUbah = findViewById(R.id.btn_ubah);
         
         etNama.setText(yNama);
