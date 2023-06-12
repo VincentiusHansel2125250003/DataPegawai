@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:text="Umur"
             android:textSize="21sp"
+            android:visibility="gone"
             />
 
         <TextView
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="Asal"
             android:textSize="21sp"
+            android:visibility="gone"
             />
 
         <TextView

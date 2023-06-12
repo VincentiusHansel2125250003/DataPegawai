@@ -17,6 +17,7 @@ import java.util.List;
 
 import hansel.if4a.datapegawai.API.APIRequestData;
 import hansel.if4a.datapegawai.API.RetroServer;
+import hansel.if4a.datapegawai.Activity.DetailActivity;
 import hansel.if4a.datapegawai.Activity.MainActivity;
 import hansel.if4a.datapegawai.Activity.UbahActivity;
 import hansel.if4a.datapegawai.Model.ModelPegawai;
@@ -69,6 +70,20 @@ public class AdapterPegawai extends RecyclerView.Adapter<AdapterPegawai.VHPegawa
             tvAsal = itemView.findViewById(R.id.tv_asal);
             tvPendidikan = itemView.findViewById(R.id.tv_pendidikan);
             tvJenisKelamin = itemView.findViewById(R.id.tv_jeniskelamin);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent pindah = new Intent(ctx, DetailActivity.class);
+                    pindah.putExtra("xId", tvID.getText().toString());
+                    pindah.putExtra("xNama", tvNama.getText().toString());
+                    pindah.putExtra("xUmur", tvUmur.getText().toString());
+                    pindah.putExtra("xAsal", tvAsal.getText().toString());
+                    pindah.putExtra("xPendidikan", tvPendidikan.getText().toString());
+                    pindah.putExtra("xJenisKelamin", tvJenisKelamin.getText().toString());
+                    ctx.startActivity(pindah);
+                }
+            });
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
