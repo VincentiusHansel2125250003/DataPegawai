@@ -56,6 +56,57 @@ public class AdapterPegawai extends RecyclerView.Adapter<AdapterPegawai.VHPegawa
         holder.tvPendidikan.setText(MP.getPendidikan());
         holder.tvJenisKelamin.setText(MP.getJeniskelamin());
         Picasso.get().load(MP.getGambarpegawai()).into(holder.ivGambar);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(ctx, DetailActivity.class);
+                pindah.putExtra("xId", MP.getId());
+                pindah.putExtra("xNama", MP.getNama());
+                pindah.putExtra("xUmur", MP.getUmur());
+                pindah.putExtra("xAsal", MP.getAsal());
+                pindah.putExtra("xPendidikan", MP.getPendidikan());
+                pindah.putExtra("xJenisKelamin", MP.getJeniskelamin());
+                pindah.putExtra("xGambar", MP.getGambarpegawai());
+                ctx.startActivity(pindah);
+            }
+        });
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                AlertDialog.Builder pesan = new AlertDialog.Builder(ctx);
+                pesan.setTitle("Perhatian");
+                pesan.setMessage("Operasi apa yang akan lakukan?");
+                pesan.setCancelable(true);
+
+                pesan.setNegativeButton("Hapus", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        holder.hapusPegawai(MP.getId());
+                        dialog.dismiss();
+                    }
+                });
+
+                pesan.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent pindah = new Intent(ctx, UbahActivity.class);
+                        pindah.putExtra("xId", MP.getId());
+                        pindah.putExtra("xNama", MP.getNama());
+                        pindah.putExtra("xUmur", MP.getUmur());
+                        pindah.putExtra("xAsal", MP.getAsal());
+                        pindah.putExtra("xPendidikan", MP.getPendidikan());
+                        pindah.putExtra("xJenisKelamin", MP.getJeniskelamin());
+                        pindah.putExtra("xGambar", MP.getGambarpegawai());
+                        ctx.startActivity(pindah);
+                    }
+                });
+
+                pesan.show();
+                return false;
+            }
+        });
     }
 
     @Override
@@ -76,55 +127,6 @@ public class AdapterPegawai extends RecyclerView.Adapter<AdapterPegawai.VHPegawa
             tvPendidikan = itemView.findViewById(R.id.tv_pendidikan);
             tvJenisKelamin = itemView.findViewById(R.id.tv_jeniskelamin);
             ivGambar = itemView.findViewById(R.id.iv_gambar);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent pindah = new Intent(ctx, DetailActivity.class);
-                    pindah.putExtra("xId", tvID.getText().toString());
-                    pindah.putExtra("xNama", tvNama.getText().toString());
-                    pindah.putExtra("xUmur", tvUmur.getText().toString());
-                    pindah.putExtra("xAsal", tvAsal.getText().toString());
-                    pindah.putExtra("xPendidikan", tvPendidikan.getText().toString());
-                    pindah.putExtra("xJenisKelamin", tvJenisKelamin.getText().toString());
-                    ctx.startActivity(pindah);
-                }
-            });
-
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    AlertDialog.Builder pesan = new AlertDialog.Builder(ctx);
-                    pesan.setTitle("Perhatian");
-                    pesan.setMessage("Operasi apa yang akan lakukan?");
-                    pesan.setCancelable(true);
-
-                    pesan.setNegativeButton("Hapus", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            hapusPegawai(tvID.getText().toString());
-                            dialog.dismiss();
-                        }
-                    });
-
-                    pesan.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent pindah = new Intent(ctx, UbahActivity.class);
-                            pindah.putExtra("xId", tvID.getText().toString());
-                            pindah.putExtra("xNama", tvNama.getText().toString());
-                            pindah.putExtra("xUmur", tvUmur.getText().toString());
-                            pindah.putExtra("xAsal", tvAsal.getText().toString());
-                            pindah.putExtra("xPendidikan", tvPendidikan.getText().toString());
-                            pindah.putExtra("xJenisKelamin", tvJenisKelamin.getText().toString());
-                            ctx.startActivity(pindah);
-                        }
-                    });
-
-                    pesan.show();
-                    return false;
-                }
-            });
         }
 
         private void hapusPegawai(String idPegawai) {

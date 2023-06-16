@@ -28,7 +28,7 @@ public class DetailActivity extends AppCompatActivity {
         yAsal = ambil.getStringExtra("xAsal");
         yPendidikan = ambil.getStringExtra("xPendidikan");
         yJenisKelamin = ambil.getStringExtra("xJenisKelamin");
-        yGambar = ambil.getStringExtra(xGambar);
+        yGambar = ambil.getStringExtra("xGambar");
 
         tvID = findViewById(R.id.tv_id);
         tvNama = findViewById(R.id.tv_nama);
