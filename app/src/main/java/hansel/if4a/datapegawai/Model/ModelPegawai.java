@@ -1,7 +1,7 @@
 package hansel.if4a.datapegawai.Model;
 
 public class ModelPegawai {
-    private String id, nama, umur, asal, pendidikan, jeniskelamin;
+    private String id, nama, umur, asal, pendidikan, jeniskelamin, gambarpegawai;
 
     public String getId() {
         return id;
@@ -25,5 +25,9 @@ public class ModelPegawai {
 
     public String getJeniskelamin() {
         return jeniskelamin;
+    }
+
+    public String getGambarpegawai() {
+        return gambarpegawai;
     }
 }

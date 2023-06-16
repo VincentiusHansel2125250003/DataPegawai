@@ -8,6 +8,25 @@
     tools:context=".Activity.DetailActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Pegawai "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="35dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_gambar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Gambar Pegawai"
+        android:layout_marginTop="75dp"
+        />
+
+    <TextView
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="285dp"
         android:text="Nama Pegawai"
         android:textSize="21sp"
         android:textStyle="bold" />
