@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".Activity.DetailActivity">
 
     <TextView
@@ -19,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="250dp"
         android:text="Nama Pegawai"
         android:textSize="21sp"
         android:textStyle="bold" />
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_nama"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Umur"
         android:textSize="21sp" />
 
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_umur"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Asal"
         android:textSize="21sp" />
 
@@ -50,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_asal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Pendidikan"
         android:textSize="21sp" />
 
@@ -60,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_pendidikan"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Jenis Kelamin"
         android:textSize="21sp" />
 

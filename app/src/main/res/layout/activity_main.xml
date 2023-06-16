@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Activity.MainActivity">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Data Pegawai"
         android:textSize="30dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:background="#AE878787"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
