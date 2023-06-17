@@ -44,7 +44,7 @@ public class TambahActivity extends AppCompatActivity {
                 asal = etAsal.getText().toString();
                 pendidikan = etPendidikan.getText().toString();
                 jenisKelamin = etJenisKelamin.getText().toString();
-                gambarpegawai = etAsal.getText().toString();
+                gambarpegawai = etGambar.getText().toString();
 
 
                 if (nama.trim().isEmpty())

@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/iv_person"
+            android:layout_toRightOf="@+id/iv_gambar"
             android:text="Nama Pegawai"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_nama"
-            android:layout_toRightOf="@id/iv_person"
+            android:layout_toRightOf="@id/iv_gambar"
             android:text="Umur"
             android:textSize="21sp"
             android:visibility="gone" />
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_umur"
-            android:layout_toRightOf="@id/iv_person"
+            android:layout_toRightOf="@id/iv_gambar"
             android:text="Asal"
             android:textSize="21sp"
             android:visibility="gone" />
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_asal"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/iv_person"
+            android:layout_toRightOf="@id/iv_gambar"
             android:text="Pendidikan"
             android:textSize="21sp" />
 
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_pendidikan"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/iv_person"
+            android:layout_toRightOf="@id/iv_gambar"
             android:text="Jenis Kelamin"
             android:textSize="21sp" />
 

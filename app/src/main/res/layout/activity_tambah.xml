@@ -1,79 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="6dp"
     android:background="@drawable/background2"
     android:orientation="vertical"
-    android:layout_margin="6dp"
     tools:context=".Activity.TambahActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tambah Data Pegawai"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        />
-
-    <EditText
-        android:id="@+id/et_nama"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Lengkap"
-        android:textSize="21sp"
-        />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_umur"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Umur"
-        android:textSize="21sp"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Tambah Data Pegawai"
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_asal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Asal"
-        android:textSize="21sp"
-        />
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:textSize="21sp" />
 
-    <EditText
-        android:id="@+id/et_pendidikan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Pendidikan"
-        android:textSize="21sp"
-        />
+        <EditText
+            android:id="@+id/et_umur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Umur"
+            android:textSize="21sp" />
 
-    <EditText
-        android:id="@+id/et_jenisKelamin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Jenis Kelamin(L/P)"
-        android:textSize="21sp"
-        />
+        <EditText
+            android:id="@+id/et_asal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Asal"
+            android:textSize="21sp" />
 
-    <EditText
-        android:id="@+id/et_gambar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Link Gambar"
-        android:textSize="21sp"
-        />
+        <EditText
+            android:id="@+id/et_pendidikan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pendidikan"
+            android:textSize="21sp" />
 
-    <Button
-        android:id="@+id/btn_simpan"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:text="Simpan"
-        android:textSize="21sp"
-        />
+        <EditText
+            android:id="@+id/et_jenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jenis Kelamin(L/P)"
+            android:textSize="21sp" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/et_gambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link Gambar"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Simpan"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+</ScrollView>
