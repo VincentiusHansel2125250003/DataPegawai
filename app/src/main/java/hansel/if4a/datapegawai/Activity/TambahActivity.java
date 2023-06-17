@@ -18,9 +18,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
-    private EditText etNama, etUmur, etAsal, etPendidikan, etJenisKelamin;
+    private EditText etNama, etUmur, etAsal, etPendidikan, etJenisKelamin, etGambar;
     private Button btnSimpan;
-    private String nama, umur, asal, pendidikan, jenisKelamin;
+    private String nama, umur, asal, pendidikan, jenisKelamin, gambarpegawai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class TambahActivity extends AppCompatActivity {
         etAsal = findViewById(R.id.et_asal);
         etPendidikan = findViewById(R.id.et_pendidikan);
         etJenisKelamin = findViewById(R.id.et_jenisKelamin);
+        etGambar = findViewById(R.id.et_gambar);
 
         btnSimpan = findViewById(R.id.btn_simpan);
 
@@ -43,6 +44,8 @@ public class TambahActivity extends AppCompatActivity {
                 asal = etAsal.getText().toString();
                 pendidikan = etPendidikan.getText().toString();
                 jenisKelamin = etJenisKelamin.getText().toString();
+                gambarpegawai = etAsal.getText().toString();
+
 
                 if (nama.trim().isEmpty())
                 {
@@ -65,7 +68,7 @@ public class TambahActivity extends AppCompatActivity {
 
     private void tambahPegawai(){
         APIRequestData ard = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = ard.ardCreate(nama, umur, asal, pendidikan, jenisKelamin);
+        Call<ModelResponse> proses = ard.ardCreate(nama, umur, asal, pendidikan, jenisKelamin, gambarpegawai);
 
         proses.enqueue(new Callback<ModelResponse>() {
             @Override

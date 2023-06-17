@@ -18,10 +18,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UbahActivity extends AppCompatActivity {
-    private String yId, yNama, yUmur, yAsal, yPendidikan, yJenisKelamin;
-    private EditText etNama, etUmur, etAsal, etPendidikan, etJenisKelamin;
+    private String yId, yNama, yUmur, yAsal, yPendidikan, yJenisKelamin, yGambar;
+    private EditText etNama, etUmur, etAsal, etPendidikan, etJenisKelamin, etGambar;
     private Button btnUbah;
-    private String nama, umur, asal, pendidikan, jenisKelamin;
+    private String nama, umur, asal, pendidikan, jenisKelamin, gambarpegawai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +35,14 @@ public class UbahActivity extends AppCompatActivity {
         yAsal = ambil.getStringExtra("xAsal");
         yPendidikan = ambil.getStringExtra("xPendidikan");
         yJenisKelamin = ambil.getStringExtra("xJenisKelamin");
+        yGambar = ambil.getStringExtra("xGambar");
         
         etNama = findViewById(R.id.et_nama);
         etUmur = findViewById(R.id.et_umur);
         etAsal = findViewById(R.id.et_asal);
         etPendidikan = findViewById(R.id.et_pendidikan);
         etJenisKelamin =  findViewById(R.id.et_jenisKelamin);
+        etGambar = findViewById(R.id.et_gambar);
         btnUbah = findViewById(R.id.btn_ubah);
         
         etNama.setText(yNama);
@@ -48,6 +50,7 @@ public class UbahActivity extends AppCompatActivity {
         etAsal.setText(yAsal);
         etPendidikan.setText(yPendidikan);
         etJenisKelamin.setText(yJenisKelamin);
+        etGambar.setText(yGambar);
         
         btnUbah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +60,7 @@ public class UbahActivity extends AppCompatActivity {
                 asal = etAsal.getText().toString();
                 pendidikan = etPendidikan.getText().toString();
                 jenisKelamin = etJenisKelamin.getText().toString();
+                gambarpegawai = etGambar.getText().toString();
 
                 if (nama.trim().isEmpty())
                 {
@@ -79,7 +83,7 @@ public class UbahActivity extends AppCompatActivity {
     
     private void ubahPegawai(){
         APIRequestData ard = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = ard.ardUpdate(yId, nama, umur, asal, pendidikan, jenisKelamin);
+        Call<ModelResponse> proses = ard.ardUpdate(yId, nama, umur, asal, pendidikan, jenisKelamin, gambarpegawai);
         
         proses.enqueue(new Callback<ModelResponse>() {
             @Override
